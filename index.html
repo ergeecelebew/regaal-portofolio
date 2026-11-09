@@ -224,7 +224,14 @@ header.bottom-shell{
 .floating-share span{font-size:17px!important}
 .floating-share:active{transform:scale(.97)}
 </style>
-\n<style id="tech-stack-section">\n.skill-section{margin-top:42px;padding:28px;border:1px solid #e8ddec;border-radius:22px;background:linear-gradient(135deg,#fff,#fff8fc)}.skill-heading h2{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin:9px 0}.skill-heading p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 20px}.skill-list{display:flex;flex-wrap:wrap;gap:10px}.skill-list span{display:inline-flex;align-items:center;padding:10px 15px;border:1px solid #eadced;border-radius:999px;background:#fff;color:#69447b;font:700 12px Manrope,sans-serif;box-shadow:0 5px 14px #76518b0b}.skill-list span:before{content:"";width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#9b5ac7,#e58bb5);margin-right:8px}@media(max-width:760px){.skill-section{padding:21px;margin-top:30px}.skill-list{gap:8px}.skill-list span{padding:9px 12px;font-size:11px}}\n</style>\n</head><body><div class="topline" id="progress"></div><header class="bottom-shell"><nav class="nav" id="nav" aria-label="Main navigation"><span class="nav-indicator" id="indicator"></span>
+\n<style id="tech-stack-section">\n.skill-section{margin-top:42px;padding:28px;border:1px solid #e8ddec;border-radius:22px;background:linear-gradient(135deg,#fff,#fff8fc)}.skill-heading h2{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin:9px 0}.skill-heading p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 20px}.skill-list{display:flex;flex-wrap:wrap;gap:10px}.skill-list span{display:inline-flex;align-items:center;padding:10px 15px;border:1px solid #eadced;border-radius:999px;background:#fff;color:#69447b;font:700 12px Manrope,sans-serif;box-shadow:0 5px 14px #76518b0b}.skill-list span:before{content:"";width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#9b5ac7,#e58bb5);margin-right:8px}@media(max-width:760px){.skill-section{padding:21px;margin-top:30px}.skill-list{gap:8px}.skill-list span{padding:9px 12px;font-size:11px}}\n</style>\n
+<style id="mobile-project-card-tap-fix">
+@media(max-width:760px){
+  #page .project-link{position:relative!important;z-index:5!important;display:flex!important;min-height:190px!important;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important;cursor:pointer!important}
+  #page .project-link *{pointer-events:none!important}
+}
+</style>
+</head><body><div class="topline" id="progress"></div><header class="bottom-shell"><nav class="nav" id="nav" aria-label="Main navigation"><span class="nav-indicator" id="indicator"></span>
 <a href="#home" class="active" aria-label="Home"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
 <a href="#about" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>About</span></a>
 <a href="#projects" aria-label="Projects"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5m8-5v5"/></svg><span>Projects</span></a>
@@ -244,6 +251,11 @@ journey:`<section><div class="page-heading"><div class="eyebrow">03 / PERJALANAN
 contact:`<section><div class="page-heading"><div class="eyebrow">04 / KONTAK</div><h1>Mari wujudkan<br><span style="color:var(--blue)">sebuah ide.</span></h1><p>Saya terbuka untuk ide menarik, kolaborasi, dan diskusi seputar teknologi maupun bisnis.</p></div><div class="contact-panel"><div><div class="eyebrow">TERBUKA UNTUK IDE</div><h2>Punya ide?</h2><p>Mari mulai dari sebuah percakapan.</p></div><a class="btn primary" href="mailto:hello@regaal.my.id">Hubungi saya ↗</a></div><div class="social-caption">TEMUKAN SAYA DI PLATFORM LAIN</div><div class="social-platforms"><a class="social-platform" href="https://www.instagram.com/simply.gaall/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram ↗</a><a class="social-platform" href="https://github.com/ergeecelebew"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.2-.4-3.9 1.4a13.5 13.5 0 0 0-7.1 0C5 1.1 3.8 1.5 3.8 1.5a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.7V22"/></svg>GitHub ↗</a>
     <a class="social-platform" href="https://www.tiktok.com/@simply.gaall?_r=1&_t=ZS-9BG4sAKLX2z" aria-label="TikTok Raga Putra Afandi">TikTok ↗</a></div></section>`
 };
+function bindProjectCardTaps(){
+ page.querySelectorAll('.project-link').forEach(card=>{
+  card.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const id=card.getAttribute('href').slice(1);show(id);},{passive:false});
+ });
+}
 function enhancePortfolioPage(){
  const items=page.querySelectorAll('.page-heading,.hero>div,.hero-card,.stats,.card,.journey article,.contact-panel,.detail-preview,.detail-meta');
  items.forEach(el=>el.classList.add('reveal'));
@@ -255,7 +267,7 @@ window.addEventListener('scroll',()=>{const el=document.getElementById('progress
 const page=document.getElementById('page'),nav=document.getElementById('nav'),indicator=document.getElementById('indicator'),links=[...nav.querySelectorAll('a')];let active='home',dragging=false,pointerId=null;
 const slot=()=> (nav.clientWidth-24)/5;
 function moveToIndex(i,instant=false){const s=slot();indicator.style.width=s+'px';indicator.style.transform='translateX('+Math.max(0,Math.min(4,i))*s+'px)';if(instant)indicator.style.transition='none';}
-function show(id,update=true){if(!pages[id])id='home';active=id;page.innerHTML=pages[id];enhancePortfolioPage();page.classList.remove('page');void page.offsetWidth;page.classList.add('page');links.forEach(a=>a.classList.toggle('active',a.hash==='#'+id));moveToIndex(links.findIndex(a=>a.hash==='#'+id));if(update&&location.hash!=='#'+id)history.pushState({page:id},'', '#'+id);window.scrollTo({top:0,behavior:'instant'});document.getElementById('topbtn').hidden=id==='home';}
+function show(id,update=true){if(!pages[id])id='home';active=id;page.innerHTML=pages[id];bindProjectCardTaps();enhancePortfolioPage();page.classList.remove('page');void page.offsetWidth;page.classList.add('page');links.forEach(a=>a.classList.toggle('active',a.hash==='#'+id));moveToIndex(links.findIndex(a=>a.hash==='#'+id));if(update&&location.hash!=='#'+id)history.pushState({page:id},'', '#'+id);window.scrollTo({top:0,behavior:'instant'});document.getElementById('topbtn').hidden=id==='home';}
 function indexFromX(x){const r=nav.getBoundingClientRect();return Math.max(0,Math.min(4,(x-r.left-7)/slot()-.5));}
 function chooseAt(x){const idx=Math.round(indexFromX(x));show(links[idx].hash.slice(1));}
 nav.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;dragging=true;pointerId=e.pointerId;nav.classList.add('dragging');nav.setPointerCapture(e.pointerId);moveToIndex(indexFromX(e.clientX));},{passive:true});
