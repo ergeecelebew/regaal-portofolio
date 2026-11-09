@@ -187,6 +187,14 @@ header.bottom-shell{
   .card:hover,.social-platform:hover,.hero-card:hover{transform:none}
 }
 </style>
+<style id="fix-home-button-tap">
+/* Keep hero actions above decorative/portrait layers and tappable on mobile */
+.hero{position:relative;isolation:isolate}
+.hero>div:first-child{position:relative;z-index:20;pointer-events:auto}
+.hero-card{z-index:1}
+.actions{position:relative;z-index:30;pointer-events:auto}
+.actions>a,.actions>button{position:relative;z-index:31;pointer-events:auto!important;touch-action:manipulation;cursor:pointer}
+</style>
 </head><body><div class="topline" id="progress"></div><header class="bottom-shell"><nav class="nav" id="nav" aria-label="Main navigation"><span class="nav-indicator" id="indicator"></span>
 <a href="#home" class="active" aria-label="Home"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
 <a href="#about" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>About</span></a>
