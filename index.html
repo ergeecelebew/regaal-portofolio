@@ -113,6 +113,11 @@ header{background:linear-gradient(180deg,#070b13f2,#070b13a6,transparent)}
 .hero-card .hero-portrait{z-index:1!important;display:block}
 .hero-card .portrait-label{z-index:5!important}
 .hero-card .floating{position:absolute!important;top:18px!important;right:18px!important;bottom:auto!important;left:auto!important;width:max-content!important;height:auto!important;min-width:0!important;max-width:calc(100% - 36px)!important;padding:10px 14px!important;display:inline-block!important;box-sizing:border-box!important;white-space:normal!important;border-radius:12px!important;line-height:1.4!important;z-index:6!important}
+</style><style>
+/* Keep portrait crisp and remove decorative haze over the photo */
+.hero-card.portrait-placeholder:before,.hero-card.portrait-placeholder:after{display:none!important}
+.hero-card .hero-portrait{filter:none!important;opacity:1!important;object-fit:cover!important;object-position:center 24%!important;transform:none!important;backface-visibility:hidden}
+.hero-card.portrait-label{background:rgba(8,13,23,.78)!important;backdrop-filter:blur(8px);}
 </style></head><body><div class="topline" id="progress"></div><header class="bottom-shell"><nav class="nav" id="nav" aria-label="Main navigation"><span class="nav-indicator" id="indicator"></span>
 <a href="#home" class="active" aria-label="Home"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
 <a href="#about" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>About</span></a>
