@@ -209,6 +209,16 @@ header.bottom-shell{
 .social-platforms a{cursor:pointer!important}
 .social-platforms a:active{transform:scale(.97)!important}
 </style>
+<style id="contact-links-layer-fix">
+/* The animated #page creates its own stacking layer. Raise only the contact page,
+   while letting taps pass through its empty area to the fixed navigation below. */
+#page:has(.social-platforms){position:relative!important;z-index:1001!important;pointer-events:none!important}
+#page:has(.social-platforms) .social-platforms,
+#page:has(.social-platforms) .social-platforms a,
+#page:has(.social-platforms) .contact-panel a{pointer-events:auto!important}
+#page:has(.social-platforms) .social-platforms{position:relative!important;z-index:1002!important}
+#page:has(.social-platforms) .social-platforms a{position:relative!important;z-index:1003!important}
+</style>
 <style id="floating-share-accessible">
 .floating-share{position:fixed!important;right:18px!important;bottom:calc(94px + env(safe-area-inset-bottom))!important;z-index:2000!important;display:flex!important;align-items:center!important;gap:8px!important;padding:13px 18px!important;border-radius:999px!important;background:#7b4bb7!important;color:#fff!important;border:1px solid #fff!important;box-shadow:0 8px 26px #3b214855!important;text-decoration:none!important;font:700 13px/1.2 Manrope,sans-serif!important;pointer-events:auto!important;touch-action:manipulation!important;isolation:isolate!important}
 .floating-share span{font-size:17px!important}
