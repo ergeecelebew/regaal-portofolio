@@ -202,6 +202,13 @@ header.bottom-shell{
 .social-platform svg{pointer-events:none}
 @media(max-width:760px){.social-platforms{margin-bottom:130px!important;gap:10px}.social-platform{min-height:46px;padding:13px 16px}}
 </style>
+<style id="social-links-final-fix">
+.social-platforms,.social-platforms *{visibility:visible!important}
+.social-platforms{position:relative!important;z-index:10!important;opacity:1!important;transform:none!important;pointer-events:auto!important}
+.social-platform{position:relative!important;z-index:11!important;opacity:1!important;transform:none!important;visibility:visible!important;pointer-events:auto!important;touch-action:pan-y!important;user-select:none;-webkit-user-select:none}
+.social-platforms a{cursor:pointer!important}
+.social-platforms a:active{transform:scale(.97)!important}
+</style>
 <style id="floating-share-accessible">
 .floating-share{position:fixed!important;right:18px!important;bottom:calc(94px + env(safe-area-inset-bottom))!important;z-index:2000!important;display:flex!important;align-items:center!important;gap:8px!important;padding:13px 18px!important;border-radius:999px!important;background:#7b4bb7!important;color:#fff!important;border:1px solid #fff!important;box-shadow:0 8px 26px #3b214855!important;text-decoration:none!important;font:700 13px/1.2 Manrope,sans-serif!important;pointer-events:auto!important;touch-action:manipulation!important;isolation:isolate!important}
 .floating-share span{font-size:17px!important}
@@ -228,7 +235,7 @@ contact:`<section><div class="page-heading"><div class="eyebrow">04 / KONTAK</di
     <a class="social-platform" href="https://www.tiktok.com/@regaal.png" aria-label="TikTok Raga Putra Afandi">TikTok ↗</a></div></section>`
 };
 function enhancePortfolioPage(){
- const items=page.querySelectorAll('.page-heading,.hero>div,.hero-card,.stats,.card,.journey article,.contact-panel,.social-platform,.detail-preview,.detail-meta');
+ const items=page.querySelectorAll('.page-heading,.hero>div,.hero-card,.stats,.card,.journey article,.contact-panel,.detail-preview,.detail-meta');
  items.forEach(el=>el.classList.add('reveal'));
  if(!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('is-visible'));return;}
  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.12});
