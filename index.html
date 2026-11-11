@@ -227,7 +227,17 @@ header.bottom-shell{
 \n<style id="tech-stack-section">\n.skill-section{margin-top:42px;padding:28px;border:1px solid #e8ddec;border-radius:22px;background:linear-gradient(135deg,#fff,#fff8fc)}.skill-heading h2{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin:9px 0}.skill-heading p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 20px}.skill-list{display:flex;flex-wrap:wrap;gap:10px}.skill-list span{display:inline-flex;align-items:center;padding:10px 15px;border:1px solid #eadced;border-radius:999px;background:#fff;color:#69447b;font:700 12px Manrope,sans-serif;box-shadow:0 5px 14px #76518b0b}.skill-list span:before{content:"";width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#9b5ac7,#e58bb5);margin-right:8px}@media(max-width:760px){.skill-section{padding:21px;margin-top:30px}.skill-list{gap:8px}.skill-list span{padding:9px 12px;font-size:11px}}\n</style>\n
 <style id="mobile-project-card-tap-fix">
 @media(max-width:760px){
-  #page .project-link{position:relative!important;z-index:5!important;display:flex!important;min-height:190px!important;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important;cursor:pointer!important}
+  #page{position:relative!important;z-index:2!important;isolation:isolate}
+  #page .project-link{
+    position:relative!important;
+    z-index:3!important;
+    display:flex!important;
+    min-height:190px!important;
+    pointer-events:auto!important;
+    touch-action:pan-y!important;
+    -webkit-tap-highlight-color:transparent!important;
+    cursor:pointer!important
+  }
   #page .project-link *{pointer-events:none!important}
 }
 </style>
@@ -253,9 +263,21 @@ contact:`<section><div class="page-heading"><div class="eyebrow">04 / KONTAK</di
 };
 function bindProjectCardTaps(){
  page.querySelectorAll('.project-link').forEach(card=>{
-  card.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const id=card.getAttribute('href').slice(1);show(id);},{passive:false});
+  card.addEventListener('click',e=>{
+   e.preventDefault();
+   e.stopPropagation();
+   show(card.getAttribute('href').slice(1));
+  },{passive:false});
  });
 }
+// Catch mobile taps before other page handlers can swallow them.
+document.addEventListener('pointerup',e=>{
+ const card=e.target.closest && e.target.closest('#page .project-link');
+ if(!card || !window.matchMedia('(max-width: 760px)').matches)return;
+ e.preventDefault();
+ e.stopPropagation();
+ show(card.getAttribute('href').slice(1));
+},true);
 function enhancePortfolioPage(){
  const items=page.querySelectorAll('.page-heading,.hero>div,.hero-card,.stats,.card,.journey article,.contact-panel,.detail-preview,.detail-meta');
  items.forEach(el=>el.classList.add('reveal'));
